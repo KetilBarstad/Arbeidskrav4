@@ -23,6 +23,12 @@ Hva er en konfunderende effekt?
 
 En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et utfall blandes sammen med effekten av en tredje variabel, som kalles en konfunderende variabel. En konfunder påvirker både eksponeringen og utfallet, men ligger ikke i årsakskjeden mellom dem.Beskriv effekten av å kontrollere for en variabel som påvirkes av utfall og avhengig variabel i en regresjonsanalyse (en collider).
 
+# Beskriv effekten av å kontrollere for en variabel som påvirkes av en intervensjon når vi ønsker å estimere effekten av intervensjonen på en annen variabel.
+
+# Beskriv effekten av å kontrollere for en variabel som påvirkes av utfall og avhengig variabel i en regresjonsanalyse (en collider).
+
+# 
+
 # Beskriv ved hjelp av en grafisk modell (Directed Acyclic Graph) en positiv sammenheng mellomkonsumpsjon av sukkerfri brus og diabetes. Begrense antall variabler til \< 4 og begrunn din modell.
 
 Vi velger følgende variabler for å se på sammehengen mellom konsumpsjon av sukkerfri brus og diabetes: "Vekt = vekt i kg", "Sukkerfri_brus" og Diabetes2 = Diabetes type 2.
