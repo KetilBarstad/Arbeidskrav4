@@ -31,17 +31,32 @@ En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et u
 
 # Beskriv ved hjelp av en grafisk modell (Directed Acyclic Graph) en positiv sammenheng mellomkonsumpsjon av sukkerfri brus og diabetes. Begrense antall variabler til \< 4 og begrunn din modell.
 
-Vi velger følgende variabler for å se på sammehengen mellom konsumpsjon av sukkerfri brus og diabetes: "Vekt = vekt i kg", "Sukkerfri_brus" og Diabetes2 = Diabetes type 2.
+En directed acyclic graph (DAG) er en type graf som visualiserer kasuale og ikke-kausale sammenhenger mellom ulike variabler. Dette gjøres ved å plotte de ulike variabelene, og deretter bruke piler for å vise årsakssammenhenger (Digitale et al., 2022). Hvis vi ønsker å fremstille den positive *sammenhengen* mellom konsumpsjon av sukkerfri brus (SF_B) og diabetes mellitus type 2 (DM2), trenger vi følgende: 
 
-Se på andre variabler som kan påvirke grafen vår (colliders, mediatorer og konfunderende variabler). Obs at de to sistnevnte må ikke kontrolles for!
+1) En hypotese: En utfallsvariabel (DM2) og en intervensjon (SF_B) som skal påvirke utfallsvariabelen
+2) De ulike variabelene som kan påvirke både utfallet og intervensjonen (dette inkluderer både 'confounders', 'colliders' og 'mediators). I dette eksempelet, velger vi én confounder i form av overvekt (OV)
 
-Valg av variabler:
-
-Diabetes type 2: Sukkerfri_brus: Overvekt: Alder:
 
 ```{r}
-
 library(dagitty)
+library(ggdag)
+library(tidyverse)
+
+dag_konfunderende <- dagitty('dag {
+  OV -> SF_B
+  OV -> DM2
+}')
+
+# Plot it
+ggdag(dag_konfunderende) +
+  theme_dag()
 ```
 
+Hvis vi ikke kontrollerer for OT  i modellen vår, vil vi kunne risikere å etablere en spuriøs korrelasjon mellom konsumpsjon av sukkerfribrus og diabetes type 2. Dette er fordi overvektige drikker oftere sukkerfri brus enn normalvektige, og de har også oftere diabetes type 2. Ved å illustere alle variabelene med en DAG og kombinere det med kunnskapen vi har om fysiologi, kan vi unngå feilaktige konklusjoner. 
+
 ## Referanseliste
+
+Digitale, J. C., Martin, J. N., & Glymour, M. M. (2022). Tutorial on directed acyclic graphs. Journal of clinical epidemiology, 142, 264–267. https://doi.org/10.1016/j.jclinepi.2021.08.001
+
+
+
