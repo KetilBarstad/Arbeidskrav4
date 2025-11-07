@@ -1,21 +1,27 @@
 ---
 title: "Arbeidskrav 4: Kausal interferens"
-author: Ketil Barstad
-format: html
-editor: visual
+author: Ketil B., Laurits H., Herman E. og Theodor S.
+date: 2025-11-7
+format:
+  html:
+    toc: true
+    toc-location: right
+    toc-title: "Innhold"
+    toc-depth: 3
+    number-sections: true
 ---
 
-# Definisjon av en kasual effekt
+## Definisjon av en kasual effekt
 
 En kausal effekt forklarer hvordan årsak-virkning foregår. Den beskriver forholdet mellom en variabel (årsak) som får en hendelse eller annen variabel til å endre seg (virkning). Vi kan skille mellom to ulike kausale effekter; deterministiske og stokastiske. Førstnevnte er mest brukt innen naturvitenskapen, der hendelse A alltid fører til hendelse B, uten unntak. En stokatisk kausalitet inneholder et element av usikkerhet, der hendelse A sannsynligvis fører til hendelse B, men ikke i alle tilfeller. Denne definisjonen er vanligere innenfor samfunnsvitenskapene, men også innenfor medisin.
 
-# Hvordan kan vi bruke en eksperimentell studie for å estimere en kausal effekt?
+## Hvordan kan vi bruke en eksperimentell studie for å estimere en kausal effekt?
 
 Gullstandarden for å estimere en kausal effekt er randomiserte kontrollerte studier (RCT). Grunnen til dette, er fordi man systematisk har redusert innflytelsen av bias, samt at det er en kontrollgruppe man sammenligner effekten av intervensjon med. Med et godt studiedesign og stort utvalg, vil man ...
 
 Det største hinderet med en RCT er at det ressurskostbart, og i noen tilfeller uetisk. Det er vanskelig å blinde både deltakere og testere, og i noen tilfeller umulig. Det er også ikke alltid mulig å sammenligne en intervensjonsgruppe med en kontrollgruppe. Et klassisk eksempel ville vært en RCT på røyking. Ingen etisk komiteé vil godkjenne at man får en gruppe med personer til å røyke som intervensjon, ettersom man vil eksponere deltakerne for helseskadelige risikoer.
 
-# Hvordan kan vi bruke en observasjonsstudier for å estimere en kausal effekt?
+## Hvordan kan vi bruke en observasjonsstudier for å estimere en kausal effekt?
 
 Det vanskelig å påvise en kausal effekt (altså at A *forårsaker* B) med en observasjonsstudiet fordi vi ikke kontrollerer for hvem som blir eksponert for hva (slik vi gjør i et RCT). Utfordringen er at sammenhenger ofte kan skyldes konfunderende faktorer som påvirker både eksponering og utfall. For å nærme seg kausalitet og estimere den kausale effekten, kan man kontrollere for slike konfundere ved hjelp av randomisering, regresjonsanalyse, matching eller stratifisering.
 
@@ -23,13 +29,13 @@ Hva er en konfunderende effekt?
 
 En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et utfall blandes sammen med effekten av en tredje variabel, som kalles en konfunderende variabel. En konfunder påvirker både eksponeringen og utfallet, men ligger ikke i årsakskjeden mellom dem.Beskriv effekten av å kontrollere for en variabel som påvirkes av utfall og avhengig variabel i en regresjonsanalyse (en collider).
 
-# Beskriv effekten av å kontrollere for en variabel som påvirkes av en intervensjon når vi ønsker å estimere effekten av intervensjonen på en annen variabel.
+## Beskriv effekten av å kontrollere for en variabel som påvirkes av en intervensjon når vi ønsker å estimere effekten av intervensjonen på en annen variabel.
 
-# Beskriv effekten av å kontrollere for en variabel som påvirkes av utfall og avhengig variabel i en regresjonsanalyse (en collider).
+## Beskriv effekten av å kontrollere for en variabel som påvirkes av utfall og avhengig variabel i en regresjonsanalyse (en collider).
 
-# 
+##
 
-# Beskriv ved hjelp av en grafisk modell (Directed Acyclic Graph) en positiv sammenheng mellomkonsumpsjon av sukkerfri brus og diabetes. Begrense antall variabler til \< 4 og begrunn din modell.
+## Beskriv ved hjelp av en grafisk modell (Directed Acyclic Graph) en positiv sammenheng mellomkonsumpsjon av sukkerfri brus og diabetes. Begrense antall variabler til \< 4 og begrunn din modell.
 
 En directed acyclic graph (DAG) er en type graf som visualiserer kasuale og ikke-kausale sammenhenger mellom ulike variabler. Dette gjøres ved å plotte de ulike variabelene, og deretter bruke piler for å vise årsakssammenhenger (Digitale et al., 2022). Hvis vi ønsker å fremstille den positive *sammenhengen* mellom konsumpsjon av sukkerfri brus (SF_B) og diabetes mellitus type 2 (DM2), trenger vi følgende: 
 
@@ -38,6 +44,9 @@ En directed acyclic graph (DAG) er en type graf som visualiserer kasuale og ikke
 
 
 ```{r}
+#| echo: false
+#| message: false
+#| warning: false
 library(dagitty)
 library(ggdag)
 library(tidyverse)
