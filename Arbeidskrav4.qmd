@@ -33,15 +33,20 @@ En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et u
 
 ## Beskriv effekten av å kontrollere for en variabel som påvirkes av utfall og avhengig variabel i en regresjonsanalyse (en collider).
 
-##
+I følge Holmberg & Andersen (2022) er en collider en tredje variabel som påvikes både avhegig og uavhegige variabelen. Dette skaper en kunstig/spuriøs sammenheng mellom de to opprinnelige variablene, selv om sammenhengen mellom dem ikke er reell. Konsekvensen av collider er falsk assosiasjon mellom de "ekte" variablene. Dette ksn påvirke validiteten til observasjonen i et studie.
+
+Valls-Pedret et al. (2015) gjennomførte en RCT som undersøkte om middelhavsdietter hadde en positiv effekt på kognitiv funksjon. De sammenlignet to middelhavsdietter med kognitiv funksjon, med en kontrolldiett hos 447 deltagere med høy kardiovaskulær risiko. Studien fant forbedring i kogntivit funksjon med begge diettene. Frafallet var 33% i kontrollgruppen, og 16 & 23% i middelhavs diettene. Variabelen som da ble "fullført studien" blir en collider fordi den påvirkes av både: Diett-intervensjon (uavhegig variabel) & Kogntiv funksjon (avhegig variabel). Det vil si at dietten deltagerne fikk og deltagernes kognitive funksjon påvirker sannsynligheten for å bli i studien.
+
+Konsekvensen av dette kan være feil i resultatene da dette kan være en overreprestasjon av personene med god kognitiv funksjon , siden de med dårlig kognitiv funksjon ofte falt av dietten. Dette kan bidra til å vise en spuriøs sammenheng mellom diett og kognitiv funksjon.
+
+## 
 
 ## Beskriv ved hjelp av en grafisk modell (Directed Acyclic Graph) en positiv sammenheng mellomkonsumpsjon av sukkerfri brus og diabetes. Begrense antall variabler til \< 4 og begrunn din modell.
 
-En directed acyclic graph (DAG) er en type graf som visualiserer kasuale og ikke-kausale sammenhenger mellom ulike variabler. Dette gjøres ved å plotte de ulike variabelene, og deretter bruke piler for å vise årsakssammenhenger (Digitale et al., 2022). Hvis vi ønsker å fremstille den positive *sammenhengen* mellom konsumpsjon av sukkerfri brus (SF_B) og diabetes mellitus type 2 (DM2), trenger vi følgende: 
+En directed acyclic graph (DAG) er en type graf som visualiserer kasuale og ikke-kausale sammenhenger mellom ulike variabler. Dette gjøres ved å plotte de ulike variabelene, og deretter bruke piler for å vise årsakssammenhenger (Digitale et al., 2022). Hvis vi ønsker å fremstille den positive *sammenhengen* mellom konsumpsjon av sukkerfri brus (SF_B) og diabetes mellitus type 2 (DM2), trenger vi følgende:
 
-1) En hypotese: En utfallsvariabel (DM2) og en intervensjon (SF_B) som skal påvirke utfallsvariabelen
-2) De ulike variabelene som kan påvirke både utfallet og intervensjonen (dette inkluderer både 'confounders', 'colliders' og 'mediators). I dette eksempelet, velger vi én confounder i form av overvekt (OV)
-
+1)  En hypotese: En utfallsvariabel (DM2) og en intervensjon (SF_B) som skal påvirke utfallsvariabelen
+2)  De ulike variabelene som kan påvirke både utfallet og intervensjonen (dette inkluderer både 'confounders', 'colliders' og 'mediators). I dette eksempelet, velger vi én confounder i form av overvekt (OV)
 
 ```{r}
 #| echo: false
@@ -61,11 +66,10 @@ ggdag(dag_konfunderende) +
   theme_dag()
 ```
 
-Hvis vi ikke kontrollerer for OT  i modellen vår, vil vi kunne risikere å etablere en spuriøs korrelasjon mellom konsumpsjon av sukkerfribrus og diabetes type 2. Dette er fordi overvektige drikker oftere sukkerfri brus enn normalvektige, og de har også oftere diabetes type 2. Ved å illustere alle variabelene med en DAG og kombinere det med kunnskapen vi har om fysiologi, kan vi unngå feilaktige konklusjoner. 
+Hvis vi ikke kontrollerer for OT i modellen vår, vil vi kunne risikere å etablere en spuriøs korrelasjon mellom konsumpsjon av sukkerfribrus og diabetes type 2. Dette er fordi overvektige drikker oftere sukkerfri brus enn normalvektige, og de har også oftere diabetes type 2. Ved å illustere alle variabelene med en DAG og kombinere det med kunnskapen vi har om fysiologi, kan vi unngå feilaktige konklusjoner.
 
 ## Referanseliste
 
 Digitale, J. C., Martin, J. N., & Glymour, M. M. (2022). Tutorial on directed acyclic graphs. Journal of clinical epidemiology, 142, 264–267. https://doi.org/10.1016/j.jclinepi.2021.08.001
 
-
-
+Holmberg, M. J., & Andersen, L. W. (2022). Collider Bias. *JAMA*, *327*(13), 1282–1283. https://doi.org/10.1001/jama.2022.1820
