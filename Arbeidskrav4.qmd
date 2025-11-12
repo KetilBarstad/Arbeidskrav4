@@ -41,7 +41,7 @@ Konsekvensen av dette kan være feil i resultatene da dette kan være en overrep
 
 ## Beskriv ved hjelp av en grafisk modell (Directed Acyclic Graph) en positiv sammenheng mellom konsumpsjon av sukkerfri brus og diabetes. Begrense antall variabler til \< 4 og begrunn din modell.
 
-En directed acyclic graph (DAG) er en type graf som visualiserer kasuale og ikke-kausale sammenhenger mellom ulike variabler. Dette gjøres ved å plotte de ulike variabelene, og deretter bruke piler for å vise årsakssammenhenger (Digitale et al., 2022). Hvis vi ønsker å fremstille den positive *sammenhengen* mellom konsumpsjon av sukkerfri brus (SF_B) og diabetes mellitus type 2 (DM2), trenger vi følgende:
+En directed acyclic graph (DAG) er en type graf som visualiserer kasuale og ikke-kausale sammenhenger mellom ulike variabler. Dette gjøres ved å plotte de ulike variabelene, og deretter bruke piler for å vise årsakssammenhenger (Digitale et al., 2022). Hvis vi ønsker å fremstille den observerte positive *sammenhengen* mellom konsumpsjon av sukkerfri brus (SF_B) og diabetes mellitus type 2 (DM2), trenger vi følgende:
 
 1)  En hypotese: En utfallsvariabel (DM2) og en intervensjon (SF_B) som skal påvirke utfallsvariabelen
 
@@ -69,7 +69,9 @@ Overvekt er en konfunderende variabel som påvirker både intervensjonen og utfa
   )
 ```
 
-Hvis vi ikke kontrollerer for OV i modellen vår, vil vi kunne risikere å etablere en spuriøs korrelasjon mellom konsumpsjon av sukkerfribrus og diabetes type 2. Dette er fordi overvektige drikker oftere sukkerfri brus enn normalvektige, og de har også oftere diabetes type 2. Ved å illustere alle variabelene med en DAG og kombinere det med kunnskapen vi har om fysiologi, kan vi unngå feilaktige konklusjoner.
+Figur 1 illustrerer at vi kan risikere å etablere en spuriøs korrelasjon mellom konsumpsjon av sukkerfribrus og DM2, hvis vi ikke kontrollerer for OV i en hypotetisk modell. Sannsynligvis er årskaen til at vi observerer at flere folk som drikker sukkerfribrus utvikler diabetes, er at de har andre risikofaktorer som overvekt eller genetikk som forårsaker sykdommen.
+
+Ved å illustere alle variabelene med en DAG og kombinere det med kunnskapen vi har om fysiologi og tidligere forskning, kan vi unngå feilaktige konklusjoner.
 
 ## Referanseliste
 
