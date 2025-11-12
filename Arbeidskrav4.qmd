@@ -27,15 +27,21 @@ Det vanskelig å påvise en kausal effekt (altså at A *forårsaker* B) med en o
 
 ## Hva er en konfunderende effekt?
 
-En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et utfall blandes sammen med effekten av en tredje variabel, som kalles en konfunderende variabel. En konfunder påvirker både eksponeringen og utfallet, men ligger ikke i årsakskjeden mellom dem.Beskriv effekten av å kontrollere for en variabel som påvirkes av utfall og avhengig variabel i en regresjonsanalyse (en collider).
+En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et utfall blandes sammen med effekten av en tredje variabel, som kalles en konfunderende variabel. En konfunder påvirker både eksponeringen og utfallet, men ligger ikke i årsakskjeden mellom dem.
 
 ## Beskriv effekten av å kontrollere for en variabel som påvirkes av en intervensjon når vi ønsker å estimere effekten av intervensjonen på en annen variabel.
 
+Aalen og Stensrud (2020) forteller oss at ofte har intervensjoner en indirekte effekt på utfallsvariabelen, via mediatorer. Med andre ord, så påvirker intervensjonen en variabel (mediatoren), som igjen påvirker utfallsvariabelen. Man kontrollerer for mediatorer når når man ønsker å undersøke den direkte effekten av intervensjonen på utfallet. 
+
+Et eksempel på dette vil være følgende: En medisin (intervensjonen) er lagd for å redusere risikoen for kardiovaskulær sykdom (utfallet) via reduksjon av blodtrykket (mediatoren).
+
+Det er viktig å merke at å kontrollere for en mediator kan være risikabelt, siden du reduserer den totale effekten av intervensjonen. Dermed er det i utgangspunktet ikke anbefalt å kontrollere for mediatorer (Digitale et al., 2022)
+
 ## Beskriv effekten av å kontrollere for en variabel som påvirkes av utfall og avhengig variabel i en regresjonsanalyse (en collider).
 
-I følge Holmberg & Andersen (2022) er en collider en tredje variabel som påvikes både avhegig og uavhegige variabelen. Dette skaper en kunstig/spuriøs sammenheng mellom de to opprinnelige variablene, selv om sammenhengen mellom dem ikke er reell. Konsekvensen av collider er falsk assosiasjon mellom de "ekte" variablene. Dette ksn påvirke validiteten til observasjonen i et studie.
+I følge Holmberg & Andersen (2022) er en collider en tredje variabel som påvikes både avhegig og uavhegige variabelen. Dette skaper en kunstig/spuriøs sammenheng mellom de to opprinnelige variablene, selv om sammenhengen mellom dem ikke er reell. Konsekvensen av collider er falsk assosiasjon mellom de "ekte" variablene. Dette kan påvirke validiteten til observasjonen i et studie.
 
-Valls-Pedret et al. (2015) gjennomførte en RCT som undersøkte om middelhavsdietter hadde en positiv effekt på kognitiv funksjon. De sammenlignet to middelhavsdietter med kognitiv funksjon, med en kontrolldiett hos 447 deltagere med høy kardiovaskulær risiko. Studien fant forbedring i kogntivit funksjon med begge diettene. Frafallet var 33% i kontrollgruppen, og 16 & 23% i middelhavs diettene. Variabelen som da ble "fullført studien" blir en collider fordi den påvirkes av både: Diett-intervensjon (uavhegig variabel) & Kogntiv funksjon (avhengig variabel). Det vil si at dietten deltagerne fikk og deltagernes kognitive funksjon påvirker sannsynligheten for å bli i studien.
+Valls-Pedret et al. (2015) gjennomførte en RCT som undersøkte om middelhavsdietter hadde en positiv effekt på kognitiv funksjon. De sammenlignet to middelhavsdietter med kognitiv funksjon, med en kontrolldiett hos 447 deltagere med høy kardiovaskulær risiko. Studien fant forbedring i kognitiv funksjon med begge diettene. Frafallet var 33% i kontrollgruppen, og 16 & 23% i middelhavs diettene. Variabelen som da ble "fullført studien" blir en collider fordi den påvirkes av både: Diett-intervensjon (uavhengig variabel) & Kogntiv funksjon (avhengig variabel). Det vil si at dietten deltagerne fikk og deltagernes kognitive funksjon påvirker sannsynligheten for å bli i studien.
 
 Konsekvensen av dette kan være feil i resultatene da dette kan være en overreprestasjon av personene med god kognitiv funksjon , siden de med dårlig kognitiv funksjon ofte falt av dietten. Dette kan bidra til å vise en spuriøs sammenheng mellom diett og kognitiv funksjon.
 
