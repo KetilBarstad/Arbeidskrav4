@@ -25,7 +25,7 @@ Det største hinderet med en RCT er at det ressurskostbart, og i noen tilfeller 
 
 Det vanskelig å påvise en kausal effekt (altså at A *forårsaker* B) med en observasjonsstudiet fordi vi ikke kontrollerer for hvem som blir eksponert for hva (slik vi gjør i et RCT). Utfordringen er at sammenhenger ofte kan skyldes konfunderende faktorer som påvirker både eksponering og utfall. For å nærme seg kausalitet og estimere den kausale effekten, kan man kontrollere for slike konfundere ved hjelp av randomisering, regresjonsanalyse, matching eller stratifisering.
 
-Hva er en konfunderende effekt?
+## Hva er en konfunderende effekt?
 
 En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et utfall blandes sammen med effekten av en tredje variabel, som kalles en konfunderende variabel. En konfunder påvirker både eksponeringen og utfallet, men ligger ikke i årsakskjeden mellom dem.Beskriv effekten av å kontrollere for en variabel som påvirkes av utfall og avhengig variabel i en regresjonsanalyse (en collider).
 
@@ -35,18 +35,17 @@ En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et u
 
 I følge Holmberg & Andersen (2022) er en collider en tredje variabel som påvikes både avhegig og uavhegige variabelen. Dette skaper en kunstig/spuriøs sammenheng mellom de to opprinnelige variablene, selv om sammenhengen mellom dem ikke er reell. Konsekvensen av collider er falsk assosiasjon mellom de "ekte" variablene. Dette ksn påvirke validiteten til observasjonen i et studie.
 
-Valls-Pedret et al. (2015) gjennomførte en RCT som undersøkte om middelhavsdietter hadde en positiv effekt på kognitiv funksjon. De sammenlignet to middelhavsdietter med kognitiv funksjon, med en kontrolldiett hos 447 deltagere med høy kardiovaskulær risiko. Studien fant forbedring i kogntivit funksjon med begge diettene. Frafallet var 33% i kontrollgruppen, og 16 & 23% i middelhavs diettene. Variabelen som da ble "fullført studien" blir en collider fordi den påvirkes av både: Diett-intervensjon (uavhegig variabel) & Kogntiv funksjon (avhegig variabel). Det vil si at dietten deltagerne fikk og deltagernes kognitive funksjon påvirker sannsynligheten for å bli i studien.
+Valls-Pedret et al. (2015) gjennomførte en RCT som undersøkte om middelhavsdietter hadde en positiv effekt på kognitiv funksjon. De sammenlignet to middelhavsdietter med kognitiv funksjon, med en kontrolldiett hos 447 deltagere med høy kardiovaskulær risiko. Studien fant forbedring i kogntivit funksjon med begge diettene. Frafallet var 33% i kontrollgruppen, og 16 & 23% i middelhavs diettene. Variabelen som da ble "fullført studien" blir en collider fordi den påvirkes av både: Diett-intervensjon (uavhegig variabel) & Kogntiv funksjon (avhengig variabel). Det vil si at dietten deltagerne fikk og deltagernes kognitive funksjon påvirker sannsynligheten for å bli i studien.
 
 Konsekvensen av dette kan være feil i resultatene da dette kan være en overreprestasjon av personene med god kognitiv funksjon , siden de med dårlig kognitiv funksjon ofte falt av dietten. Dette kan bidra til å vise en spuriøs sammenheng mellom diett og kognitiv funksjon.
 
-## 
-
-## Beskriv ved hjelp av en grafisk modell (Directed Acyclic Graph) en positiv sammenheng mellomkonsumpsjon av sukkerfri brus og diabetes. Begrense antall variabler til \< 4 og begrunn din modell.
+## Beskriv ved hjelp av en grafisk modell (Directed Acyclic Graph) en positiv sammenheng mellom konsumpsjon av sukkerfri brus og diabetes. Begrense antall variabler til \< 4 og begrunn din modell.
 
 En directed acyclic graph (DAG) er en type graf som visualiserer kasuale og ikke-kausale sammenhenger mellom ulike variabler. Dette gjøres ved å plotte de ulike variabelene, og deretter bruke piler for å vise årsakssammenhenger (Digitale et al., 2022). Hvis vi ønsker å fremstille den positive *sammenhengen* mellom konsumpsjon av sukkerfri brus (SF_B) og diabetes mellitus type 2 (DM2), trenger vi følgende:
 
 1)  En hypotese: En utfallsvariabel (DM2) og en intervensjon (SF_B) som skal påvirke utfallsvariabelen
-2)  De ulike variabelene som kan påvirke både utfallet og intervensjonen (dette inkluderer både 'confounders', 'colliders' og 'mediators). I dette eksempelet, velger vi én confounder i form av overvekt (OV)
+
+2)  De ulike variabelene som kan påvirke både utfallet og intervensjonen (dette inkluderer både 'confounders', 'colliders' og 'mediators). I dette eksempelet, velger vi én confounder i form av overvekt (OV). Denne variabelen velges fordi overvekt er en risikofaktor for DM2, og folk som er overvektige er dermed oftere diabetikere (Folkehelseinstittet, 2021). Vi har også forskning på at overvektige konsumerer mer sukkerfribrus sammenlignet med normalvektige (Fowler et al., 2015). 
 
 ```{r}
 #| echo: false
@@ -61,15 +60,24 @@ dag_konfunderende <- dagitty('dag {
   OV -> DM2
 }')
 
-# Plot it
 ggdag(dag_konfunderende) +
-  theme_dag()
+  theme_dag() +
+  labs(
+    title = "DAG",
+    caption = "OV = overvekt, SF_B = sukkerfribrus og DM2 = Diabetes mellitus type 2. 
+Overvekt er en konfunderende variabel som påvirker både intervensjonen og utfallet"
+  )
 ```
 
-Hvis vi ikke kontrollerer for OT i modellen vår, vil vi kunne risikere å etablere en spuriøs korrelasjon mellom konsumpsjon av sukkerfribrus og diabetes type 2. Dette er fordi overvektige drikker oftere sukkerfri brus enn normalvektige, og de har også oftere diabetes type 2. Ved å illustere alle variabelene med en DAG og kombinere det med kunnskapen vi har om fysiologi, kan vi unngå feilaktige konklusjoner.
+Hvis vi ikke kontrollerer for OV i modellen vår, vil vi kunne risikere å etablere en spuriøs korrelasjon mellom konsumpsjon av sukkerfribrus og diabetes type 2. Dette er fordi overvektige drikker oftere sukkerfri brus enn normalvektige, og de har også oftere diabetes type 2. Ved å illustere alle variabelene med en DAG og kombinere det med kunnskapen vi har om fysiologi, kan vi unngå feilaktige konklusjoner.
 
 ## Referanseliste
 
 Digitale, J. C., Martin, J. N., & Glymour, M. M. (2022). Tutorial on directed acyclic graphs. Journal of clinical epidemiology, 142, 264–267. https://doi.org/10.1016/j.jclinepi.2021.08.001
 
 Holmberg, M. J., & Andersen, L. W. (2022). Collider Bias. *JAMA*, *327*(13), 1282–1283. https://doi.org/10.1001/jama.2022.1820
+
+Folkehelseinstituttet. (2021, 31. mai). Diabetes i Norge. https://www.fhi.no/nettpub/hin/ikke-smittsomme/diabetes/
+
+Fowler, S. P., Williams, K., & Hazuda, H. P. (2015). Diet soda intake is associated with long-term increases in waist circumference in a biethnic cohort of older adults: the San Antonio Longitudinal Study of Aging. Journal of the American Geriatrics Society, 63(4), 708–715. https://doi.org/10.1111/jgs.13376
+
