@@ -13,13 +13,11 @@ format:
 
 ## Definisjon av en kasual effekt
 
-En kausal effekt forklarer hvordan årsak-virkning foregår. Den beskriver forholdet mellom en variabel (årsak) som får en hendelse eller annen variabel til å endre seg (virkning). Vi kan skille mellom to ulike kausale effekter; deterministiske og stokastiske. Førstnevnte er mest brukt innen naturvitenskapen, der hendelse A alltid fører til hendelse B, uten unntak. En stokatisk kausalitet inneholder et element av usikkerhet, der hendelse A sannsynligvis fører til hendelse B, men ikke i alle tilfeller. Denne definisjonen er vanligere innenfor samfunnsvitenskapene, men også innenfor medisin.
+Kausal effekt kan defineres som forskjellen på utfallene en person ville opplevd dersom en ble gitt ulike behandlinger. Eksempelvis beskriver Council et al (2000) utfallet ved å sammenlikne en eksperimentell behandling (E), kontra kontroll (C). For hver observasjon som gjøres kan behandlingen kun gi et utfall. Får personen behandling C, blir utfallet C, og motsatt. Rubin (1976), Rosenbaum og Rubin (1983) og Holland (1986), referert i Council et al (2000) utviklet Rubin-Rosenbaum-Holland (RRH)-teorien for kausal effekt. Vi tar dette som utgangspunkt for å svare på definisjonen. I RRH er det forskjellen mellom utfallene hos en person ved E, og C som definerer kausal effekten. For eksempel om vi skulle ønske å finne ut om fysisk aktivitet i form av å gå turer for utrente kan redusere blodtrykk, har vi en gruppe som utfører E, mens gruppe C fortsetter som normalt. Kausal effekten i denne sammenhengen vil være forskjellen på målingen av blodtrykket. Dersom endring er oppstått, vil vi kunne konkludere at E gir en kausal effekt.
 
 ## Hvordan kan vi bruke en eksperimentell studie for å estimere en kausal effekt?
 
-Gullstandarden for å estimere en kausal effekt er randomiserte kontrollerte studier (RCT). Grunnen til dette, er fordi man systematisk har redusert innflytelsen av bias, samt at det er en kontrollgruppe man sammenligner effekten av intervensjon med. Med et godt studiedesign og stort utvalg, vil man ...
-
-Det største hinderet med en RCT er at det ressurskostbart, og i noen tilfeller uetisk. Det er vanskelig å blinde både deltakere og testere, og i noen tilfeller umulig. Det er også ikke alltid mulig å sammenligne en intervensjonsgruppe med en kontrollgruppe. Et klassisk eksempel ville vært en RCT på røyking. Ingen etisk komiteé vil godkjenne at man får en gruppe med personer til å røyke som intervensjon, ettersom man vil eksponere deltakerne for helseskadelige risikoer.
+Shadish et al (2002), i likhet med Council et al (2000) beskriver randomiserte eksperimentelle studier som den mest pålitelige metoden, altså gullstandarden for å estimere kausal effekt. Dette gjøres ved at behandlingene blir tilfeldig fordelt, slik at resultatet har en direkte sammenheng av behandlingen, ettersom andre faktorer ikke spiller inn (Council et al., 2000). Eksempelvis kunne vi testet en ny trenings-pille, hvor gruppe E fikk pillen, mens gruppe C fikk et placebo (beskrivelsen for E og C står i svaret over). I slutten av måleperioden kan vi gjøre en sluttmåling, hvor vi vurderer effekten av treningspillen. Shadish et al (2002) har tre hovedprinsipper for en eksperimentell studie. 1) For å finne ut av kausal effekten blir målingene utført jevnt over en tidsperiode, vi finner 2) en sammenheng mellom årsak og virkning, og at 3) muligheten for alternative forklaringer må bli utelukket.
 
 ## Hvordan kan vi bruke en observasjonsstudier for å estimere en kausal effekt?
 
@@ -31,7 +29,7 @@ En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et u
 
 ## Beskriv effekten av å kontrollere for en variabel som påvirkes av en intervensjon når vi ønsker å estimere effekten av intervensjonen på en annen variabel.
 
-Aalen og Stensrud (2020) forteller oss at ofte har intervensjoner en indirekte effekt på utfallsvariabelen, via mediatorer. Med andre ord, så påvirker intervensjonen en variabel (mediatoren), som igjen påvirker utfallsvariabelen. Man kontrollerer for mediatorer når når man ønsker å undersøke den direkte effekten av intervensjonen på utfallet. 
+Aalen og Stensrud (2020) forteller oss at ofte har intervensjoner en indirekte effekt på utfallsvariabelen, via mediatorer. Med andre ord, så påvirker intervensjonen en variabel (mediatoren), som igjen påvirker utfallsvariabelen. Man kontrollerer for mediatorer når når man ønsker å undersøke den direkte effekten av intervensjonen på utfallet.
 
 Et eksempel på dette vil være følgende: En medisin (intervensjonen) er lagd for å redusere risikoen for kardiovaskulær sykdom (utfallet) via reduksjon av blodtrykket (mediatoren).
 
@@ -51,7 +49,7 @@ En directed acyclic graph (DAG) er en type graf som visualiserer kasuale og ikke
 
 1)  En hypotese: En utfallsvariabel (DM2) og en intervensjon (SF_B) som skal påvirke utfallsvariabelen
 
-2)  De ulike variabelene som kan påvirke både utfallet og intervensjonen (dette inkluderer både 'confounders', 'colliders' og 'mediators). I dette eksempelet, velger vi én confounder i form av overvekt (OV). Denne variabelen velges fordi overvekt er en risikofaktor for DM2, og folk som er overvektige er dermed oftere diabetikere (Folkehelseinstittet, 2021). Vi har også forskning på at overvektige konsumerer mer sukkerfribrus sammenlignet med normalvektige (Fowler et al., 2015). 
+2)  De ulike variabelene som kan påvirke både utfallet og intervensjonen (dette inkluderer både 'confounders', 'colliders' og 'mediators). I dette eksempelet, velger vi én confounder i form av overvekt (OV). Denne variabelen velges fordi overvekt er en risikofaktor for DM2, og folk som er overvektige er dermed oftere diabetikere (Folkehelseinstittet, 2021). Vi har også forskning på at overvektige konsumerer mer sukkerfribrus sammenlignet med normalvektige (Fowler et al., 2015).
 
 ```{r}
 #| echo: false
@@ -81,6 +79,8 @@ Ved å illustere alle variabelene med en DAG og kombinere det med kunnskapen vi 
 
 ## Referanseliste
 
+Council, N. R., Medicine, I. of, Board on Children, Youth, Families, Development, C. on I. the S. of E. C., Phillips, D. A., & Shonkoff, J. P. (2000). *From Neurons to Neighborhoods: The Science of Early Childhood Development* (1st ed.). National Academies Press. <https://doi.org/10.17226/9824>
+
 Digitale, J. C., Martin, J. N., & Glymour, M. M. (2022). Tutorial on directed acyclic graphs. Journal of clinical epidemiology, 142, 264–267. https://doi.org/10.1016/j.jclinepi.2021.08.001
 
 Holmberg, M. J., & Andersen, L. W. (2022). Collider Bias. *JAMA*, *327*(13), 1282–1283. https://doi.org/10.1001/jama.2022.1820
@@ -89,3 +89,4 @@ Folkehelseinstituttet. (2021, 31. mai). Diabetes i Norge. https://www.fhi.no/net
 
 Fowler, S. P., Williams, K., & Hazuda, H. P. (2015). Diet soda intake is associated with long-term increases in waist circumference in a biethnic cohort of older adults: the San Antonio Longitudinal Study of Aging. Journal of the American Geriatrics Society, 63(4), 708–715. https://doi.org/10.1111/jgs.13376
 
+Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental and quasi-experimental designs for generalized causal inference*. Houghton Mifflin.
