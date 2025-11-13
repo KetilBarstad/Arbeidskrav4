@@ -90,3 +90,6 @@ Folkehelseinstituttet. (2021, 31. mai). Diabetes i Norge. https://www.fhi.no/net
 Fowler, S. P., Williams, K., & Hazuda, H. P. (2015). Diet soda intake is associated with long-term increases in waist circumference in a biethnic cohort of older adults: the San Antonio Longitudinal Study of Aging. Journal of the American Geriatrics Society, 63(4), 708–715. https://doi.org/10.1111/jgs.13376
 
 Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental and quasi-experimental designs for generalized causal inference*. Houghton Mifflin.
+
+Valls-Pedret, C., Sala-Vila, A., Serra-Mir, M., Corella, D., de la Torre, R., Martínez-González, M. Á., Martínez-Lapiscina, E. H., Fitó, M., Pérez-Heras, A., Salas-Salvadó, J., Estruch, R., & Ros, E. (2015). Mediterranean Diet and Age-Related Cognitive Decline: A Randomized Clinical Trial. JAMA internal medicine, 175(7), 1094–1103. https://doi.org/10.1001/jamainternmed.2015.1668
+
