@@ -3,7 +3,7 @@ title: "Arbeidskrav 4: Kausal interferens"
 author: Ketil B., Laurits H., Herman E. og Theodor S.
 date: 2025-11-7
 format:
-  html:
+  pdf:
     toc: true
     toc-location: right
     toc-title: "Innhold"
@@ -26,6 +26,10 @@ Det vanskelig å påvise en kausal effekt (altså at A *forårsaker* B) med en o
 ## Hva er en konfunderende effekt?
 
 En konfunderende effekt oppstår når sammenhengen mellom en eksponering og et utfall blandes sammen med effekten av en tredje variabel, som kalles en konfunderende variabel. En konfunder påvirker både eksponeringen og utfallet, men ligger ikke i årsakskjeden mellom dem.
+
+## Hvilke farer finnes i (særlig) observasjonstudier når vi ønsker å finne en kausal effekt?
+
+I Hammerton & Munafò (2021) kommer det frem tre farer som kan oppstå i henhold til observasjonsstudier. 1) Konfunderingbias oppstår dersom eksponering og utfall påvirkes av en tredje variabel. Derav vil det virke som at det er en sammenheng mellom eksponering og utfall, mens det egentlig ikke er tilstrekkelig målt, eller analysert for å trekke en slutning. 2) Seleksjonsbias oppstår når deltakerne for studiet ikke er representativt for populasjonen som skal skrives om, at oppfølgingen blir ulik, eller om det blir frafall blant deltakerne. Siste faren er 3) målingsbias, hvor det kan oppstå målefeil under eksponering, måling eller blant konfunderinger. Målingen kan føre til at bakdører åpnes, eller ikke kan lukkes, som vil si at forbindelsen mellom eksponering og utfall kan feiltolkes. Eksempler her kan være om selvrapporteringen, eller målingene som gjøres blir gjort feil, noe som fører til en skjevhet i estimeringen.
 
 ## Beskriv effekten av å kontrollere for en variabel som påvirkes av en intervensjon når vi ønsker å estimere effekten av intervensjonen på en annen variabel.
 
@@ -83,13 +87,14 @@ Council, N. R., Medicine, I. of, Board on Children, Youth, Families, Development
 
 Digitale, J. C., Martin, J. N., & Glymour, M. M. (2022). Tutorial on directed acyclic graphs. Journal of clinical epidemiology, 142, 264–267. https://doi.org/10.1016/j.jclinepi.2021.08.001
 
-Holmberg, M. J., & Andersen, L. W. (2022). Collider Bias. *JAMA*, *327*(13), 1282–1283. https://doi.org/10.1001/jama.2022.1820
-
 Folkehelseinstituttet. (2021, 31. mai). Diabetes i Norge. https://www.fhi.no/nettpub/hin/ikke-smittsomme/diabetes/
 
 Fowler, S. P., Williams, K., & Hazuda, H. P. (2015). Diet soda intake is associated with long-term increases in waist circumference in a biethnic cohort of older adults: the San Antonio Longitudinal Study of Aging. Journal of the American Geriatrics Society, 63(4), 708–715. https://doi.org/10.1111/jgs.13376
 
+Hammerton, G., & Munafò, M. R. (2021). Causal inference with observational data: the need for triangulation of evidence. Psychological medicine, 51(4), 563–578. https://doi-org.ezproxy.inn.no/10.1017/S0033291720005127
+
+Holmberg, M. J., & Andersen, L. W. (2022). Collider Bias. *JAMA*, *327*(13), 1282–1283. https://doi.org/10.1001/jama.2022.1820
+
 Shadish, W. R., Cook, T. D., & Campbell, D. T. (2002). *Experimental and quasi-experimental designs for generalized causal inference*. Houghton Mifflin.
 
 Valls-Pedret, C., Sala-Vila, A., Serra-Mir, M., Corella, D., de la Torre, R., Martínez-González, M. Á., Martínez-Lapiscina, E. H., Fitó, M., Pérez-Heras, A., Salas-Salvadó, J., Estruch, R., & Ros, E. (2015). Mediterranean Diet and Age-Related Cognitive Decline: A Randomized Clinical Trial. JAMA internal medicine, 175(7), 1094–1103. https://doi.org/10.1001/jamainternmed.2015.1668
-
